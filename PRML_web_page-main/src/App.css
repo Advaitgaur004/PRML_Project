@@ -1,0 +1,117 @@
+.App {
+  text-align: center;
+  /* height: 150vh; */
+  justify-content: center;
+  flex: 1;
+  /* align-items: center; */
+  display: flex;
+}
+.component{
+  width: 54%;
+  margin-top: 2.5%;
+
+}
+.header{
+  width: 100%;
+  font-size: 30px;
+  font-weight: 450;
+  line-height: 40px;
+  word-spacing: 6px;
+
+}
+.header_context{
+  font-weight: 580;
+  font-size:22px;
+  text-align: start;
+   margin-bottom: 3px;
+}
+.context{
+  width: 100%;
+  font-weight: 370;
+  display: inline-block;
+  text-align: start;
+  margin-top: 5px;
+  word-spacing: 4px;
+  line-height: 25px;
+}
+.contact_info{
+  width: 100%;
+  font-weight: 370;
+  display: inline-block;
+  text-align: start;
+  margin-top: 5px;
+  word-spacing: 2px;
+  line-height: 25px;
+}
+.header_Problem{
+  font-weight: 460;
+  font-size:24px;
+  text-align: start;
+   margin-bottom: 15px;
+   margin-top: 40px;
+}
+.pro_imag{
+  width: 70%;
+}
+.youtube_video{
+  text-align: start;
+  width: 560px;
+  height: 350px;
+}
+.code{
+  width: 100%;
+  background-color: #eee;
+  overflow-x: scroll;
+  height: 200px;
+  border-radius: 25px;
+}
+.citation {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.author {
+  font-weight: bold;
+}
+
+.title {
+  font-style: italic;
+}
+
+.booktitle {
+  font-weight: bold;
+  color: blue;
+}
+.container{
+  display: flex;
+  grid-row: 2;
+  gap: 35px;
+  justify-content: center;
+  width: 100%;
+  /* overflow-x: scroll; */
+}
+.profile_container{
+  border: #28282a 1px solid;
+  box-shadow: 2px 1px 1px 1px #dddddd;
+  padding: 15px;
+  flex-direction: row;
+}
+.prfile_pic{
+  height: 120px;
+}
+
+@media screen and (max-width: 480px) {
+  .youtube_video{
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .youtube_video{
+    width: 300px;
+    height: 300px;
+  }
+}

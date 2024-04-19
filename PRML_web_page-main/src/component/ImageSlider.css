@@ -1,0 +1,45 @@
+.image-slider {
+    /* width: 100px; */
+    overflow-x: hidden;
+    display: flex;
+    justify-content:center ;
+    align-items: center;
+    margin: 0 20px;
+  }
+  
+  .image-container {
+    display: flex;
+    transition: transform 0.5s ease;
+    justify-content:center ;
+    align-items: center;
+  }
+  
+  .image-container img {
+    width: 100%;
+    flex: 0 0 auto;
+    /* display: none; */
+  }
+  
+  .controls {
+    margin-top: 10px;
+    gap: 30px;
+    margin-left: 20px;
+  }
+  
+  .controls button {
+    font-size: 20px;
+    cursor: pointer;
+    margin-right: 40px;
+  }
+  
+  .visible {
+    display: block;
+   
+  }
+  .notvisible{
+      display: none;
+  }
+  .add{
+    height: 300px;
+    width: 100px;
+  }
