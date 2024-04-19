@@ -38,8 +38,11 @@ selected_movie = st.selectbox(
 movie_id = movies.loc[movies['title'] == selected_movie, 'movieId'].values[0]
 
 link = pd.read_csv('D:\\PRML project\\Dataset\\links.csv')
+recommended_movies = get_results(movie_id)
+for i in range(len(recommended_movies)):
+    recommended_movies[i][0] = link.loc[link['movieId'] == recommended_movies[i][0], 'imdbId'].values[0]
+
 if st.button('Show Recommendation'):
-    recommended_movies = get_results(movie_id)
     for lst in recommended_movies:
         st.text(lst[1])
         st.image(fetch_poster(lst[0]))
