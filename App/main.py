@@ -8,6 +8,7 @@ from streamlit_extras.colored_header import colored_header
 from streamlit_extras.customize_running import center_running
 import time
 import gdown
+import os
 
 # START CODE FOR BACKGROUND
 background_image = """
@@ -50,14 +51,23 @@ colored_header(
         color_name="blue-70",
     )
 
-url = 'https://drive.google.com/file/d/1K7p-14gFeUEvkAUmXXWRpaKsp5btyDly/view?usp=drive_link'
+# url = 'https://drive.google.com/file/d/1K7p-14gFeUEvkAUmXXWRpaKsp5btyDly/view?usp=sharing'
 
-# Download the file to a local path
-output = 'movies.pkl'
-gdown.download(url, output, quiet=False)
+# # Download the file to a local path
+# output = 'movies.pkl'
+# gdown.download(url, output, quiet=False)
+
+# # Load the pickle file
+# movies = pickle.load(open(output, 'rb'))
+current_dir = os.getcwd()
+
+# Construct the relative path to the pickle file
+file_path = os.path.join(current_dir, 'movie.pkl')
 
 # Load the pickle file
-movies = pickle.load(open(output, 'rb'))
+with open(file_path, 'rb') as file:
+    movies = pickle.load(file)
+
 
 # movies = pickle.load(open('https://drive.google.com/file/d/1K7p-14gFeUEvkAUmXXWRpaKsp5btyDly/view?usp=sharing','rb'))
 movies = pd.DataFrame(movies)
