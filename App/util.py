@@ -118,3 +118,7 @@ def get_results(movie_id):
 
     movie_idx = dict(zip(movie_df['movieId'], list(movie_df.index)))
     return hybrid
+
+def styled_text(text, font_family, font_size, font_color):
+    styled_text = f'<span style="font-family:{font_family}; font-size:{font_size}px; color:{font_color};">{text}</span>'
+    return styled_text
