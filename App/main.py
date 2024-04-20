@@ -62,7 +62,7 @@ colored_header(
 current_dir = os.getcwd()
 
 # Construct the relative path to the pickle file
-file_path = os.path.join(current_dir, 'movie.pkl')
+file_path = os.path.join(current_dir, 'App', 'movie.pkl')
 
 # Load the pickle file
 with open(file_path, 'rb') as file:
