@@ -6,3 +6,6 @@ node_modules/
 
 # Ignore pycache
 __pycache__/
+
+# Ignore .strealit
+.strealit/secrets.toml

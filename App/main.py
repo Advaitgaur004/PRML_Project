@@ -22,10 +22,10 @@ background_image = """
 """
 st.markdown(background_image, unsafe_allow_html=True)
 #END CODE FOR BACKGROUND
-
+api_key = st.secrets["API_KEY"]
 
 def poster(movie_id):
-    url = f"https://api.themoviedb.org/3/movie/{movie_id}?api_key={config('API_KEY')}&language=en-US"
+    url = f"https://api.themoviedb.org/3/movie/{movie_id}?api_key={api_key}&language=en-US"
     data = requests.get(url)
     data = data.json()
     try:
