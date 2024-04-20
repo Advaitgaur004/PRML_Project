@@ -7,6 +7,7 @@ from decouple import config
 from streamlit_extras.colored_header import colored_header
 from streamlit_extras.customize_running import center_running
 import time
+import gdown
 
 # START CODE FOR BACKGROUND
 background_image = """
@@ -48,7 +49,17 @@ colored_header(
         description="",
         color_name="blue-70",
     )
-movies = pickle.load(open('App\\movie.pkl','rb'))
+
+url = 'https://drive.google.com/uc?id=1K7p-14gFeUEvkAUmXXWRpaKsp5btyDly'
+
+# Download the file to a local path
+output = 'movies.pkl'
+gdown.download(url, output, quiet=False)
+
+# Load the pickle file
+movies = pickle.load(open(output, 'rb'))
+
+# movies = pickle.load(open('https://drive.google.com/file/d/1K7p-14gFeUEvkAUmXXWRpaKsp5btyDly/view?usp=sharing','rb'))
 movies = pd.DataFrame(movies)
 movie_list = movies['title'].values
 
