@@ -8,4 +8,4 @@ node_modules/
 __pycache__/
 
 # Ignore .strealit
-.strealit/secrets.toml
+.App/strealit/secrets.toml
