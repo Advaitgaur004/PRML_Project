@@ -8,31 +8,18 @@ from streamlit_extras.colored_header import colored_header
 from streamlit_extras.customize_running import center_running
 import time
 
-
-
 # START CODE FOR BACKGROUND
-import base64
-
-@st.cache_data()
-def get_base64(bin_file):
-    with open(bin_file, 'rb') as f:
-        data = f.read()
-    return base64.b64encode(data).decode()
-
-def set_background(png_file):
-    bin_str = get_base64(png_file)
-    page_bg_img = '''
-    <style>
-    .main {
-    background-image: url("data:image/png;base64,%s");
-    background-size: cover;
-    background-attachment: local;
-    }
-    </style>
-    ''' % bin_str
-    st.markdown(page_bg_img, unsafe_allow_html=True)
-
-set_background('D:\\PRML project\\Img\\image.jpg')
+background_image = """
+<style>
+[data-testid="stAppViewContainer"] > .main {
+    background-image: url("https://res.cloudinary.com/dlsakk1pf/image/upload/v1713611574/image_vedwte.jpg");
+    background-size: 100vw 100vh;  # This sets the size to cover 100% of the viewport width and height
+    background-position: center;  
+    background-repeat: no-repeat;
+}
+</style>
+"""
+st.markdown(background_image, unsafe_allow_html=True)
 #END CODE FOR BACKGROUND
 
 
@@ -92,7 +79,7 @@ if st.button('Show Recommendation'):
         if poster(lst[0]) is not None:
             with eval(f"top_col{idx + 1}"):
                 st.image(poster(lst[0]), width=200)
-                st.text(lst[1])
+                st.write(styled_text(lst[1], 'Lobster',20,'white'),unsafe_allow_html=True)
         else:
             continue
 
@@ -101,7 +88,7 @@ if st.button('Show Recommendation'):
         if poster(lst[0]) is not None:
             with eval(f"bottom_col{idx + 1}"):
                 st.image(poster(lst[0]), width=200)
-                st.text(lst[1])
+                st.write(styled_text(lst[1], 'Lobster',20,'white'),unsafe_allow_html=True)
         else:
             continue
 
