@@ -48,7 +48,7 @@ colored_header(
         description="",
         color_name="blue-70",
     )
-movies = pickle.load(open('D:\\PRML project\\App\\movie.pkl','rb'))
+movies = pickle.load(open('App\\movie.pkl','rb'))
 movies = pd.DataFrame(movies)
 movie_list = movies['title'].values
 
@@ -62,7 +62,7 @@ selected_movie = st.selectbox(
 
 movie_id = movies.loc[movies['title'] == selected_movie, 'movieId'].values[0]
 
-link = pd.read_csv('D:\\PRML project\\Dataset\\links.csv')
+link = pd.read_csv('https://raw.githubusercontent.com/Advaitgaur004/PRML_Project/main/Dataset/links.csv')
 
 recommended_movies = get_results(movie_id)[:6]
 for i in range(len(recommended_movies)):
