@@ -69,8 +69,6 @@ selected_movie = st.selectbox(
     movie_list
 )
 
-
-
 movie_id = movies.loc[movies['title'] == selected_movie, 'movieId'].values[0]
 
 link = pd.read_csv('https://raw.githubusercontent.com/Advaitgaur004/PRML_Project/main/Dataset/links.csv')
