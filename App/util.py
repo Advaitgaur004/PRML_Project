@@ -111,7 +111,7 @@ def get_results(movie_id):
         final_elements = final_elements[:10]
 
     # Create a list of tuples containing both the title and movie ID
-    hybrid = [(movie_id, movie_id_to_title[movie_id]) for movie_id in final_elements]
+    hybrid = [[movie_id, movie_id_to_title[movie_id]] for movie_id in final_elements]
 
     # Optionally, if you want to sort hybrid based on movie IDs:
     hybrid.sort(key=lambda x: x[0])

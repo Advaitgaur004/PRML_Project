@@ -9,9 +9,12 @@ def fetch_poster(movie_id):
     url = f"https://api.themoviedb.org/3/movie/{movie_id}?api_key={config('API_KEY')}&language=en-US"
     data = requests.get(url)
     data = data.json()
-    poster_path = data['poster_path']
-    full_path = "https://image.tmdb.org/t/p/w500/" + poster_path
-    return full_path
+    try:
+        poster_path = data['poster_path']
+        full_path = "https://image.tmdb.org/t/p/w500/" + poster_path
+        return full_path
+    except:
+        return None
 
 # def recommend(movie):
 #     index = movies[movies['title'] == movie].index[0]
@@ -38,31 +41,18 @@ selected_movie = st.selectbox(
 movie_id = movies.loc[movies['title'] == selected_movie, 'movieId'].values[0]
 
 link = pd.read_csv('D:\\PRML project\\Dataset\\links.csv')
+
 recommended_movies = get_results(movie_id)
 for i in range(len(recommended_movies)):
-    recommended_movies[i][0] = link.loc[link['movieId'] == recommended_movies[i][0], 'imdbId'].values[0]
-
+    recommended_movies[i][0] = link.loc[link['movieId'] == recommended_movies[i][0], 'tmdbId'].values[0]
 if st.button('Show Recommendation'):
     for lst in recommended_movies:
-        st.text(lst[1])
-        st.image(fetch_poster(lst[0]))
-    
-
-    # recommended_movie_names,recommended_movie_posters = recommend(selected_movie)
-    # col1, col2, col3, col4, col5 = st.beta_columns(5)
-    # with col1:
-    #     st.text(recommended_movie_names[0])
-    #     st.image(recommended_movie_posters[0])
-    # with col2:
-    #     st.text(recommended_movie_names[1])
-    #     st.image(recommended_movie_posters[1])
-
-    # with col3:
-    #     st.text(recommended_movie_names[2])
-    #     st.image(recommended_movie_posters[2])
-    # with col4:
-    #     st.text(recommended_movie_names[3])
-    #     st.image(recommended_movie_posters[3])
-    # with col5:
-    #     st.text(recommended_movie_names[4])
-    #     st.image(recommended_movie_posters[4])
+        if fetch_poster(lst[0]) is not None:
+            print(lst)
+            st.image(fetch_poster(lst[0]), width=200)
+            st.text(lst[1])
+        else:
+            print(lst)
+            continue
+    st.balloons()
+    st.balloons()
