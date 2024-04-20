@@ -50,7 +50,7 @@ colored_header(
         color_name="blue-70",
     )
 
-url = 'https://drive.google.com/file/d/1K7p-14gFeUEvkAUmXXWRpaKsp5btyDly/view?usp=drive_link'
+url = 'https://drive.google.com/file/d/1K7p-14gFeUEvkAUmXXWRpaKsp5btyDly/view?usp=sharing'
 
 # Download the file to a local path
 output = 'movies.pkl'
