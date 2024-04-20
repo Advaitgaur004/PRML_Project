@@ -4,8 +4,8 @@ def get_results(movie_id):
     from scipy.sparse import csr_matrix
     from sklearn.metrics.pairwise import cosine_similarity
 
-    movie_df = pd.read_csv('D:\\PRML project\\Dataset\\movies.csv')
-    rating_df = pd.read_csv('D:\\PRML project\\Dataset\\ratings.csv')
+    movie_df = pd.read_csv('https://raw.githubusercontent.com/Advaitgaur004/PRML_Project/main/Dataset/movies.csv')
+    rating_df = pd.read_csv('https://raw.githubusercontent.com/Advaitgaur004/PRML_Project/main/Dataset/ratings.csv')
 
     movie_stats = rating_df.groupby('movieId')['rating'].agg(['count', 'mean'])
     C = movie_stats['count'].mean() #Average number of ratings for a given movie
