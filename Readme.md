@@ -1,6 +1,6 @@
 # Movie Recommendation System
 
-This repository contains code for a Movie Recommendation System developed as part of the Pattern Recognition and Machine Learning (PRML) course project. The objective of this project is to comprehensively understand traditional machine learning techniques by applying them to address the task of movie recommendation. The project employs various techniques such as Collaborative Filtering, Content-Based Filtering, Hybrid Filtering, Naive Bayes, and Logistic Regression to provide recommendations based on user preferences and movie attributes.
+This repository contains code for a Movie Recommendation System developed as part of the Pattern Recognition and Machine Learning (PRML) course project. The objective of this project is to comprehensively understand traditional machine learning techniques by applying them to address the task of movie recommendation. The project employs various techniques such as Collaborative Filtering, Content-Based Filtering, Hybrid Filtering, Naive Bayes, Logistic Regression and Neural Networks to provide recommendations based on user preferences and movie attributes.
 
 ## Project Overview
 The project aims to develop a Movie Recommendation System using the MovieLens Small Latest Dataset. The system recommends movies based on user preferences or specific movie attributes. Different techniques are employed and systematically evaluated to determine the most effective approach for movie recommendation.
