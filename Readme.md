@@ -1,5 +1,9 @@
 # 🎬 Movie Recommendation System 🍿
 
+[Front Page](https://prml-project-front-page.vercel.app/)
+
+[Movie Recommendation System](https://prmlmovierecommendationsystem.streamlit.app/)
+
 Welcome to our Movie Recommendation System repository! 🎉 This project is a part of the Pattern Recognition and Machine Learning (PRML) course, aiming to dive deep into traditional ML techniques by applying them to the exciting task of movie recommendation. We've explored various methods like Collaborative Filtering, Content-Based Filtering, Hybrid Filtering, Naive Bayes, Logistic Regression, and even Neural Networks to recommend movies based on user preferences and movie attributes.
 
 ## 🚀 Project Overview
@@ -72,7 +76,7 @@ Feel free to adapt and customize this template further based on your project's s
 - Advait Gaur 
 - Qazi Talha Ali
 
-For any inquiries, please contact [b22ai058@iitj.ac.in](mailto:b22ai058@iitj.ac.in).
+For any inquiries, please contact [b22cs004@iitj.ac.in](mailto:b22cs004@iitj.ac.in).
 
 ---
 
