@@ -3,10 +3,12 @@ import './ImageSlider.css';
 import test from '../Image/test.png'
 import intro from '../Image/intro.png'
 import supp_sketch from '../Image/supp_sketch.png'
+import website from '../Image/website.png'
+import movielen from '../Image/movielen.png'
 
 function ImageScroll() {
     const [currentIndex, setCurrentIndex] = useState(0);
-   const images=[supp_sketch,test,intro,supp_sketch]
+   const images=[supp_sketch,test,intro,website,movielen,supp_sketch]
   const scrollLeft = () => {
     setCurrentIndex((prevIndex) => Math.max(prevIndex - 1, 0));
   };

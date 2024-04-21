@@ -2,31 +2,37 @@ import React from 'react'
 import { ImGithub } from "react-icons/im";
 import { IoLogoLinkedin } from "react-icons/io";
 import test from '../Image/test.png'
+import advait from '../Image/Advait.jpg'
+import aniket from '../Image/Aniket.jpg'
+import qazi from '../Image/Qazi.jpg'
+import aditya from '../Image/Aditya.jpg'
+import aansh from '../Image/aansh.jpg'
+
 function Team() {
     const teams=[
         {
             name:"Advait Gaur",
-            img:test,
+            img:advait,
             github:"https://github.com/Advaitgaur004"
         },
         {
             name:"Aniket Singh",
-            img:test,
+            img:aniket,
             github:"https://github.com/aniket170105"
         },
         {
             name:"Qazi Talha",
-            img:test,
+            img:qazi,
             github:"https://github.com/Qazi-Talha-Ali-087"
         },
         {
             name:"Aditya Padhy",
-            img:test,
+            img:aditya,
             github:"https://github.com/aditya-padhy"
         },
         {
             name:"Aansh Dubey",
-            img:test,
+            img:aansh,
             github:"https://github.com/QuantTitan"
         },
     ]
