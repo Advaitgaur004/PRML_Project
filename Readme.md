@@ -1,5 +1,11 @@
 # 🎬 Movie Recommendation System 🍿
 
+[Front Page](https://prml-project-front-page.vercel.app/)
+
+[SpotLight Video](https://www.youtube.com/watch?v=lCZSry91v_Q)
+
+[Movie Recommendation System](https://prmlmovierecommendationsystem.streamlit.app/)
+
 Welcome to our Movie Recommendation System repository! 🎉 This project is a part of the Pattern Recognition and Machine Learning (PRML) course, aiming to dive deep into traditional ML techniques by applying them to the exciting task of movie recommendation. We've explored various methods like Collaborative Filtering, Content-Based Filtering, Hybrid Filtering, Naive Bayes, Logistic Regression, and even Neural Networks to recommend movies based on user preferences and movie attributes.
 
 ## 🚀 Project Overview
@@ -26,6 +32,45 @@ Our goal is to build a robust Movie Recommendation System using the MovieLens Sm
 ## 🎥 Usage
 To access the web demo of our Movie Recommendation System, visit [Demo Link](https://prmlmovierecommendationsystem.streamlit.app/).
 
+## 💻 Installation
+Clone the repository:
+   ```bash
+   $ cd your-project
+   $ git clone https://github.com/your-username/your-project.git](https://github.com/Advaitgaur004/PRML_Project.git
+   $ pip install -r requirements.txt
+```
+Contributing
+Fork the project.
+Create a new branch 
+   ```bash
+   $ git checkout -b feature
+   ```
+Commit your changes
+   ```bash
+   $ git commit -am 'Add feature'
+   ```
+Push to the branch 
+   ```bash
+   $ git push origin feature
+   ```
+
+Create a new Pull Request.
+
+## ⚠️ Local environment changes need to be implemented.
+   ```bash
+   file_path = os.path.join(current_dir, 'App', 'movie.pkl')
+```
+to 
+   ```bash
+   file_path = os.path.join(current_dir, 'movie.pkl')
+```
+change the piece of code from
+
+
+## Acknowledgments
+Give credit to the tools, libraries, and people who inspired or helped you in building your project.
+Feel free to adapt and customize this template further based on your project's specific needs and preferences.
+
 ## 👨‍💻 Contributors
 - Aansh Chandrakant Dubey (QuantTitan)
 - Aditya Padhy
@@ -33,7 +78,7 @@ To access the web demo of our Movie Recommendation System, visit [Demo Link](htt
 - Advait Gaur 
 - Qazi Talha Ali
 
-For any inquiries, please contact [b22ai058@iitj.ac.in](mailto:b22ai058@iitj.ac.in).
+For any inquiries, please contact [b22cs004@iitj.ac.in](mailto:b22cs004@iitj.ac.in).
 
 ---
 
