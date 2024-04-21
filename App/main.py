@@ -10,6 +10,19 @@ import time
 import gdown
 import os
 
+
+def is_deployment():
+    # Check if the environment variable 'DEPLOYMENT' is set
+    return os.environ.get('DEPLOYMENT') == 'true'
+
+if is_deployment():
+    print("Running in deployment environment")
+else:
+    print("Running on localhost")
+
+
+
+
 # START CODE FOR BACKGROUND
 background_image = """
 <style>
